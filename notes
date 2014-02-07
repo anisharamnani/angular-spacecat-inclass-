@@ -1,0 +1,45 @@
+app/                --> all of the files to be used in production --> app
+  css/              --> css files --> css assets
+    app.css         --> default stylesheet --> actual css files
+  img/              --> image files --> image assets
+  index.html        --> app layout file (the main html template file of the app) --> index view view! 
+  index-async.html  --> just like index.html, but loads js files asynchronously --> a version of index that will load things not at the same time
+  js/               --> javascript files --> JS files
+    app.js          --> application --> main js file ? 
+    controllers.js  --> application controllers --> give instructions the routes
+    directives.js   --> application directives --> ? NEW! gives directives of the things 
+    filters.js      --> custom angular filters --> ? NEW! helper, visual thing, partial
+    services.js     --> custom angular services --> NEW! 
+  lib/              --> vendor js, no tasks, third pary things. 
+    angular/ --> all the angualrs
+      angular.js        --> the latest angular js
+      angular.min.js    --> the latest minified angular js
+      angular-*.js      --> angular add-on modules
+      version.txt       --> version number
+  partials/             --> angular view partials (partial html templates) --> partial html 
+    partial1.html
+    partial2.html
+
+config/karma.conf.js        --> config file for running unit tests with Karma --> testing 
+config/protractor-conf.js    --> config file for running e2e tests with Protractor --> testing 
+
+scripts/            --> handy shell/js/ruby scripts
+  e2e-test.sh       --> runs end-to-end tests with Karma (*nix)
+  e2e-test.bat      --> runs end-to-end tests with Karma (windows)
+  test.bat          --> autotests unit tests with Karma (windows)
+  test.sh           --> autotests unit tests with Karma (*nix)
+  web-server.js     --> simple development webserver based on node.js
+
+test/               --> test source files and libraries
+  e2e/              -->
+    scenarios.js    --> end-to-end specs
+  lib/
+    angular/                --> angular testing libraries
+      angular-mocks.js      --> mocks that replace certain angular services in tests
+      angular-scenario.js   --> angular's scenario (end-to-end) test runner library
+      version.txt           --> version file
+  unit/                     --> unit level specs/tests
+    controllersSpec.js      --> specs for controllers
+    directivessSpec.js      --> specs for directives
+    filtersSpec.js          --> specs for filters
+    servicesSpec.js         --> specs for services
